@@ -25,3 +25,16 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+
+
+
+/*
+    main(){
+        int far; 
+        for(far = 0; far<=300; far += 20){
+            printf("%3.0f \t | \t %6.3f \n", far, (5.0/9.0)*(far-32.0)); // basically value of far goes to %3.0f and value of cel is computed on the spot and given to %6.3f
+        }
+    }
+
+
+*/
