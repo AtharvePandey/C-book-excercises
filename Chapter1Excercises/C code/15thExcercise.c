@@ -1,0 +1,22 @@
+//write the temp converter using a function declaration
+
+#include<stdio.h>
+
+float conv(float far);
+
+int main()
+{
+    float far; 
+    printf("Far: \t Cel: \n");
+    printf("--------------------------\n");
+
+        for(far = 0; far<=300; far += 20){
+            printf("%3.0f \t | \t %6.3f \n", far, conv(far)); 
+        }
+    return 0;
+}
+
+
+float conv(float far){
+    return (5.0 / 9.0) * (far - 32.0);
+}
