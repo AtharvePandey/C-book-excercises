@@ -62,10 +62,11 @@ int main(void)
             wordLen = 0;
             state = IN;
             ++arrIndex;
+            if(arrIndex>=10){
+                break;
+            }
         }
     }
-
-    //above code will throw an error if the number of words exceeds array length....
 
     printf("length of all the words in order: \n");
 
