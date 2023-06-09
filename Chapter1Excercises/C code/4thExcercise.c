@@ -15,14 +15,11 @@ int main(int argc, char const *argv[])
     upper = 300;
     step = 20;
 
-    printf("farValue: \t celValue: \n");    // \t indicates a tab (4 spaces) and \n makes  a new line since printf can't make one..
+    printf("celValue: \t farValue: \n");    // \t indicates a tab (4 spaces) and \n makes  a new line since printf can't make one..
     printf("--------------------------\n"); // print as a table like the specifications on page 16 of the book
 
-    // while (/* condition */)
-    // {
-    //     /* code */
-    // }
-    
+    for (cel = lower; cel <= upper; cel = cel + step)
+        printf("%3.2f\t\t %6.2f\n", cel, ((9.0 / 5.0) * (cel))+32);
 
     return 0;
 }
