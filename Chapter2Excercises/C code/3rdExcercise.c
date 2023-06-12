@@ -40,13 +40,13 @@ int htoi(char s[])
     // Process each character in the string
     while (i < len) //the remaining indexes are less than length
     {
-        char c = tolower(s[i]);
+        char c = tolower(s[i]); //now we wont have to chack for A-F since all values in s[i] are lowercased 
         int digit;
 
         // Convert hex digit to integer value
         if (isdigit(c))
         {
-            digit = c - '0';
+            digit = c - '0'; //this gives the numeric value of a character stored in s[i]
         }
         else if (c >= 'a' && c <= 'f')
         {
