@@ -22,27 +22,27 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb"
-        },
-  
-        {
-            "name": "(lldb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "/Users/atharve/Desktop/C-book-excercises/Chapter1Excercises/Excecutables",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb"
-        },
-        {
-            "name": "(lldb) Attach",
-            "type": "cppdbg",
-            "request": "attach",
-            "program": "/Users/atharve/Desktop/C-book-excercises/Chapter1Excercises/Excecutables",
-            "MIMode": "lldb"
         }
+  
+        // {
+        //     "name": "(lldb) Launch",
+        //     "type": "cppdbg",
+        //     "request": "launch",
+        //     "program": "/Users/atharve/Desktop/C-book-excercises/Chapter1Excercises/Excecutables",
+        //     "args": [],
+        //     "stopAtEntry": false,
+        //     "cwd": "${fileDirname}",
+        //     "environment": [],
+        //     "externalConsole": false,
+        //     "MIMode": "lldb"
+        // },
+        // {
+        //     "name": "(lldb) Attach",
+        //     "type": "cppdbg",
+        //     "request": "attach",
+        //     "program": "/Users/atharve/Desktop/C-book-excercises/Chapter1Excercises/Excecutables",
+        //     "MIMode": "lldb"
+        // }
 
     ]
 }
