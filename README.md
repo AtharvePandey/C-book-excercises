@@ -11,9 +11,9 @@ While working through I may create issues on problems that might be good first
 issues for newcomers.. 
 
 follow the following: 
--create folders for appropriate chapters
--have a folder for .c files and keep another folder for .exe
--follow similar naming convention so that the files stay in order
+- create folders for appropriate chapters
+- have a folder for .c files and keep another folder for .exe
+- follow similar naming convention so that the files stay in order
 
 feel free to discuss pull requests and such with me, or reach out to me via email
 if you have questions on a topic i've already covered
