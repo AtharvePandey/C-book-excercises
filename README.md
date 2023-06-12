@@ -1,11 +1,20 @@
 # C-book-excercises
 
-This is basically me going through and taking notes on "The C Programming Language 2nd Edition" by Kernighan and Ritchie
-A pdf of the book is included in this repo, along with my solutions to the excersises in each chapter (with proper comments...)
+## _Going through "C Programming Language 2nd edition by Kerninghan and Ritchie" and completing all problems within it_
 
-Note if you would like to contribute, the general format is as such: 
-    1.) make a seperate directory/folder for each chapter, and within it, have 2 seperate folders:
-        1.1) for the C code itself
-        2.2) for Excecutables which run the C code
-    2.) try following similar naming convention such as "Chapter'N'Excercise where n is chapter number
-    3.) do not change anything in the cbook folder, it is just a copy of the book
+This is an excellent resource for those wanting to learn the C programming language. 
+A free pdf of the book is included in 'theCbook' folder
+
+##Rules:
+If you decide to use this resource then first of all fork the repo.
+While working through I may create issues on problems that might be good first
+issues for newcomers.. 
+
+follow the following: 
+-create folders for appropriate chapters
+-have a folder for .c files and keep another folder for .exe
+-follow similar naming convention so that the files stay in order
+
+feel free to discuss pull requests and such with me, or reach out to me via email
+if you have questions on a topic i've already covered
+
