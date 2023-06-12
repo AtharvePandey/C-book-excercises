@@ -5,7 +5,7 @@
 This is an excellent resource for those wanting to learn the C programming language. 
 A free pdf of the book is included in 'theCbook' folder
 
-##Rules:
+## Rules:
 If you decide to use this resource then first of all fork the repo.
 While working through I may create issues on problems that might be good first
 issues for newcomers.. 
