@@ -5,18 +5,42 @@
 #include <stdio.h>
 #include <string.h> //to get the length of the arrays.... 
 
-char strRemove(char s1[], char s2[]);
+void strRemove(char s1[], char s2[]);
 
 int main(void){
-    char *string1 = "Hello";
-    char *string2 = "howre"; //return string shold be ll but might have to debug
+    char* string1 = "Hello";
+    char* string2 = "howre"; //return string shold be ll but might have to debug
 
-    printf("retString: %c\n", strRemove(string1, string2));
+    strRemove(string1, string2);
+
+    printf("retString: %s\n", string1);
     return 0;
 }
 
 
-char strRemove(char s1[], char s2[]){
-    //lets assume both strings are the same length?
 
+void strRemove(char s1[], char s2[]) {
+    int i, j, k;
+    i = j = k = 0;
+
+    // Iterate over each character in s1
+    for (i = 0; s1[i] != '\0'; i++) {
+        int shouldRemove = 0; //declare a boolean in each iteration
+        
+        // Check if the character in s1 is present in s2
+        for (j = 0; s2[j] != '\0'; j++) {
+            if (s1[i] == s2[j]) {
+                shouldRemove = 1;
+                break;
+            }
+        }
+        
+        // If the character should not be removed, copy it back to s1
+        if (!shouldRemove) {
+            s1[k++] = s1[i];
+        }
+    }
+    
+    // Terminate s1 with a null character at the updated length
+    s1[k] = '\0';
 }
