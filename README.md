@@ -1,4 +1,4 @@
-# C-book-excercises
+# Learn C with me!
 
 ## _Going through "C Programming Language 2nd edition by Kerninghan and Ritchie" and completing all problems within it_
 
