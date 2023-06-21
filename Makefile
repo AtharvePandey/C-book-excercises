@@ -1,25 +1,34 @@
-# #this makefile is for the entire project
-# #define src to be the main directory
-# SRCDIR = src
+SRCDIR = src
+#INCDIR = include
+OBJDIR = obj
 
-# #added wild card declaration
+SRC = $(wildcard $(SRCDIR)/*.c)
+#INC = $(wildcard $(INCDIR)/*.h)
+OBJ = $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRC))
+PGMS = hello
+CFLAGS = -O2 
 
-# SRC = $(wildcard $(SRCDIR)/*.c)
-# PGMS = hello
-# CFLAGS = -O2
-# all: $(PGMS)
-# .PHONY: all
+all: $(PGMS)
 
-# hello: $(OBJ)
-# 	$(CC) $(CFLAGS) $(OBJ) -o $@
+.PHONY: all
 
-SRC = $(wildcard *.c)
-OBJ = $(patsubst %.c,%.o,$(SRC))
-CFLAGS = -O2
+hello: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $@
 
-main: $(OBJ)
-
-$(OBJ): %.o: %.c
+$(OBJ): $(OBJDIR)/%.o: $(SRCDIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+clean:
+	rm -f $(OBJ)
 
 
+# Another customary target is distclean (cleaning prior to distributing the
+# collected sources).
+
+distclean: clean
+	rm -f $(PGMS)
+
+
+# Indicate that these targets are phony.
+
+.PHONY: clean distclean
 

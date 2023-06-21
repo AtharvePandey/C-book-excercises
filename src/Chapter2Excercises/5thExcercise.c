@@ -17,6 +17,7 @@ int main(void) {
         printf("This is\nany(\"First String\",\"Second\") = %i\n", any(str, str2));
 
         return 0;
+        
 }
 
 
