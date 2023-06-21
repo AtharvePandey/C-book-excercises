@@ -1,34 +1,22 @@
-SRCDIR = src
-#INCDIR = include
-OBJDIR = obj
+SRCDIR := /Users/atharve/Desktop/C-book-excercises/src
+OBJDIR := /Users/atharve/Desktop/C-book-excercises/obj
 
-SRC = $(wildcard $(SRCDIR)/*.c)
-#INC = $(wildcard $(INCDIR)/*.h)
-OBJ = $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRC))
-PGMS = make
-CFLAGS = -O2 
+SOURCES := $(shell find $(SRCDIR) -name "*.c")
+OBJECTS := $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SOURCES))
+EXECUTABLES := $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%, $(SOURCES))
 
-all: $(PGMS)
+CFLAGS := -O2
 
-.PHONY: all
+.PHONY: all clean
 
-hello: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $@
+all: $(EXECUTABLES)
 
-$(OBJ): $(OBJDIR)/%.o: $(SRCDIR)/%.c
+$(OBJDIR)/%: $(OBJDIR)/%.o
+	$(CC) $(CFLAGS) $< -o $@
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	rm -f $(OBJ)
-
-
-# Another customary target is distclean (cleaning prior to distributing the
-# collected sources).
-
-distclean: clean
-	rm -f $(PGMS)
-
-
-# Indicate that these targets are phony.
-
-.PHONY: clean distclean
-
+	rm -f $(OBJECTS) $(EXECUTABLES)
