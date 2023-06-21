@@ -14,7 +14,7 @@ int main(void) {
         char *str = "First String";
         char *str2 = "Second";
 
-        printf("This is\nany(\"First String\",\"Second\") = %i\n", index);
+        printf("This is\nany(\"First String\",\"Second\") = %i\n", any(str, str2));
 
         return 0;
 }
