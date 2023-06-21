@@ -12,7 +12,7 @@ issues for newcomers..
 
 follow the following: 
 - create folders for appropriate chapters
-- have a folder for .c files and keep another folder for .exe
+- have a folder for .c files 
 - follow similar naming convention so that the files stay in order
 
 feel free to discuss pull requests and such with me, or reach out to me via email
