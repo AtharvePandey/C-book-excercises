@@ -5,7 +5,7 @@ OBJDIR = obj
 SRC = $(wildcard $(SRCDIR)/*.c)
 #INC = $(wildcard $(INCDIR)/*.h)
 OBJ = $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRC))
-PGMS = hello
+PGMS = make
 CFLAGS = -O2 
 
 all: $(PGMS)
